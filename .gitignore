@@ -1,0 +1,5 @@
+pkg/
+xelis-captcha/pkg/
+xelis-captcha/target/
+public/xelis_captcha_bg.wasm
+public/xelis_captcha.js
