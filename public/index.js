@@ -1,11 +1,7 @@
-const { hello_world } = wasm_bindgen;
+import init, { hello_world } from "/xelis_captcha.js";
 
-async function load() {
-    console.log("Loading WASM module...");
-    await wasm_bindgen();
-    console.log("WASM module loaded!");
-    let msg = await hello_world();
-    console.log("Message: ", msg);
-}
-
-load();
+console.log("Loading WASM module...");
+await init();
+console.log("WASM module loaded!");
+let msg = await hello_world();
+console.log("Message: ", msg);
