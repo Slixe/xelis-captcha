@@ -18,11 +18,7 @@ fi
 # Make sure wasm-pack is installed
 cargo install wasm-pack
 
-# Create WASM lib for javascript browser
-cd xelis-captcha
-RUSTFLAGS='-C target-feature=+atomics,+bulk-memory,+mutable-globals' wasm-pack build --no-typescript --target no-modules --release
+# Compile using wasm-pack
+python3 compile.py
 
-
-# Copy files in public folder
-cp pkg/xelis_captcha_bg.wasm ../public/
-cp pkg/xelis_captcha.js ../public/
+echo "Build complete."
